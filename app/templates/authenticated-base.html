@@ -13,10 +13,11 @@
     }
 
     #sidebar {
-        background-color: var(--brand-surface);
-        max-width: 250px;
+        width: 250px;
+        min-width: 250px;
+        flex-shrink: 0;
         min-height: 100vh;
-        transition: all 0.3s;
+        transition: margin-left 0.3s;
         background: var(--brand-sidebar);
         border-bottom: 1px solid color-mix(in srgb, var(--brand-ink) 14%, transparent);
     }
@@ -45,7 +46,8 @@
     }
 
     #content {
-        width: 100%;
+        flex: 1 1 0%;
+        min-width: 0;
         padding: 1rem;
         transition: all 0.3s;
         display: flex;
